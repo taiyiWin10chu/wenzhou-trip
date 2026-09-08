@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="l5FdiDnK3C0sSX6ztATyoE">
+<head data-page-node-id="BatOPjvqp7GurPEYNdpN9c">
+<meta charset="UTF-8" data-page-node-id="AH2iApRq8w2cWuBMKWGbfu">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="WnfoQh0V31Jlfwjo56sqX7">
+<meta name="format-detection" content="telephone=no" data-page-node-id="A0oG14nYKp0fiDhGugEGMx">
+<meta name="theme-color" content="#faf6ee" id="theme-color-meta" data-page-node-id="wUJLsaGj5cnjIr6Q6lTDHt">
+<title>温州行</title>
+<style>
+  /* ========== 主题变量 ========== */
+  :root {
+    --bg: #faf6ee;
+    --bg-pattern: #f3ece0;
+    --card: #ffffff;
+    --card-soft: #f7f1e6;
+    --text: #2c2825;
+    --text-muted: #6b6258;
+    --text-faint: #9a8f80;
+    --border: #e8e1d3;
+    --border-strong: #d4c9b3;
+    --accent: #c44536;
+    --d1: #c44536;
+    --d2: #4a7c8c;
+    --hotel: #c8941f;
+    --shadow: 0 1px 3px rgba(60,40,20,0.06), 0 4px 12px rgba(60,40,20,0.04);
+    --shadow-lg: 0 4px 12px rgba(60,40,20,0.08), 0 12px 32px rgba(60,40,20,0.06);
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+  [data-theme="dark"] {
+    --bg: #1a1714;
+    --bg-pattern: #221e18;
+    --card: #25211b;
+    --card-soft: #2d2820;
+    --text: #ece4d3;
+    --text-muted: #a89c87;
+    --text-faint: #7a7060;
+    --border: #3a3328;
+    --border-strong: #4d4438;
+    --accent: #e87257;
+    --d1: #e87257;
+    --d2: #7ab0bf;
+    --hotel: #e4b73c;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.3);
+  }
+  /* 跟随系统偏好（用户未手动切换时） */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+      --bg: #1a1714;
+      --bg-pattern: #221e18;
+      --card: #25211b;
+      --card-soft: #2d2820;
+      --text: #ece4d3;
+      --text-muted: #a89c87;
+      --text-faint: #7a7060;
+      --border: #3a3328;
+      --border-strong: #4d4438;
+      --accent: #e87257;
+      --d1: #e87257;
+      --d2: #7ab0bf;
+      --hotel: #e4b73c;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 20% 0%, var(--bg-pattern) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 100%, var(--bg-pattern) 0%, transparent 50%);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+
+  /* ========== 顶部倒计时 Hero ========== */
+  .hero {
+    padding: 24px 16px 20px;
+    background: linear-gradient(180deg, var(--card-soft) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    padding: 3px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+  .hero-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .hero-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .hero-event {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .hero-event-icon {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .hero-event-info { flex: 1; min-width: 0; }
+  .hero-event-label { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
+  .hero-event-name { font-size: 14px; font-weight: 600; margin-top: 2px; }
+  .hero-event-time { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    text-align: center;
+  }
+  .countdown-unit {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 4px 10px;
+    box-shadow: var(--shadow);
+  }
+  .countdown-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    font-feature-settings: "tnum";
+  }
+  .countdown-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .countdown-tz {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* ========== Section ========== */
+  section { padding: 28px 0; }
+  .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-left: 2px;
+  }
+  .section-title-en {
+    font-size: 10px;
+    color: var(--text-faint);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin-left: 6px;
+  }
+
+  /* ========== 总览地图 ========== */
+  .map-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .map-svg { width: 100%; height: auto; display: block; }
+  .map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-line {
+    width: 18px; height: 0;
+    border-top: 2px dashed var(--text);
+  }
+  .legend-line.d1 { border-color: var(--d1); }
+  .legend-line.d2 { border-color: var(--d2); }
+  .legend-star {
+    color: var(--hotel);
+    font-size: 14px;
+  }
+
+  /* ========== 已确认订单 ========== */
+  .booking-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .booking-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .booking-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: var(--card-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .booking-icon.train { color: #2a7a3e; background: #e8f3eb; }
+  .booking-icon.flight { color: #1c5e8a; background: #e6eff5; }
+  .booking-icon.hotel { color: #b07020; background: #f7eedb; }
+  [data-theme="dark"] .booking-icon.train { background: #1d2e22; }
+  [data-theme="dark"] .booking-icon.flight { background: #1d2a33; }
+  [data-theme="dark"] .booking-icon.hotel { background: #2e2718; }
+  .booking-body { flex: 1; min-width: 0; }
+  .booking-head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .booking-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .booking-tag {
+    font-size: 10px;
+    padding: 1px 6px;
+    background: var(--card-soft);
+    color: var(--text-muted);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  .booking-row {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .booking-row .arrow { color: var(--text-faint); flex-shrink: 0; }
+  .booking-meta {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-faint);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .booking-note {
+    margin-top: 6px;
+    padding: 6px 10px;
+    background: var(--card-soft);
+    border-left: 2px solid var(--accent);
+    font-size: 12px;
+    color: var(--text-muted);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* ========== 每日行程 ========== */
+  .day-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .day-tab {
+    flex: 1;
+    padding: 10px 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    color: var(--text-muted);
+  }
+  .day-tab.active {
+    color: white;
+    border-color: transparent;
+  }
+  .day-tab[data-day="1"].active { background: var(--d1); }
+  .day-tab[data-day="2"].active { background: var(--d2); }
+  .day-tab-date {
+    display: block;
+    font-size: 11px;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  .day-panel { display: none; }
+  .day-panel.active { display: block; }
+
+  .day-head {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .day-head-date {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+  .day-head-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .day-head-summary {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .day-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .btn {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text-muted);
+  }
+  .btn[data-day="1"] { color: var(--d1); }
+  .btn[data-day="2"] { color: var(--d2); }
+  .btn[data-day="1"].btn-primary { background: var(--d1); color: white; border-color: var(--d1); }
+  .btn[data-day="2"].btn-primary { background: var(--d2); color: white; border-color: var(--d2); }
+
+  .day-route-map {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: none;
+  }
+  .day-route-map.show { display: block; }
+  .day-route-map-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* 时间轴 */
+  .timeline {
+    position: relative;
+    padding-left: 0;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+    align-items: start;
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-time {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    padding-top: 2px;
+  }
+  .timeline-item.is-d1 .timeline-time { color: var(--d1); }
+  .timeline-item.is-d2 .timeline-time { color: var(--d2); }
+  .timeline-body {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .timeline-body:active { transform: scale(0.99); }
+  .timeline-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .timeline-title-icon { font-size: 14px; opacity: 0.7; }
+  .timeline-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .timeline-tags {
+    margin-top: 6px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .timeline-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--card-soft);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+  .timeline-tag.book { background: #fff4e5; color: #b85f0a; border-color: #f0d4a8; }
+  .timeline-tag.warn { background: #fce9e6; color: var(--accent); border-color: #f3c8c0; }
+  [data-theme="dark"] .timeline-tag.book { background: #2e2218; color: #e89a4c; border-color: #4a3624; }
+  [data-theme="dark"] .timeline-tag.warn { background: #2e1f1c; color: var(--accent); border-color: #4a2d28; }
+
+  /* ========== 餐饮推荐 ========== */
+  .restaurant-filter {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+  .restaurant-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .restaurant-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .restaurant-card.recommended {
+    border-left: 3px solid var(--accent);
+  }
+  .restaurant-head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .restaurant-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .restaurant-tag {
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: var(--card-soft);
+    color: var(--text-muted);
+  }
+  .restaurant-star {
+    color: var(--accent);
+    font-size: 12px;
+    margin-left: auto;
+  }
+  .restaurant-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .restaurant-dishes {
+    font-size: 12px;
+    color: var(--text);
+    background: var(--card-soft);
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .restaurant-dishes-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .dish-item {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 2px;
+  }
+  .dish-item.must::before {
+    content: "★";
+    color: var(--accent);
+    margin-right: 2px;
+  }
+  .restaurant-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .restaurant-actions .btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* ========== 待办清单 ========== */
+  .todo-list {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .todo-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 14px;
+  }
+  .todo-item:last-child { border-bottom: none; }
+  .todo-marker {
+    color: var(--accent);
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .todo-text { flex: 1; }
+  .todo-item.done .todo-text {
+    text-decoration: line-through;
+    color: var(--text-faint);
+  }
+  .todo-meta {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 2px;
+  }
+  .todo-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-strong);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 4px;
+    background: var(--card);
+    transition: all 0.15s;
+  }
+  .todo-check:hover { border-color: var(--accent); }
+  .todo-check.checked {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .todo-check svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ========== 实用贴士 ========== */
+  .tip-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+  }
+  .tip-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tip-content {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ========== Footer ========== */
+  footer {
+    padding: 24px 16px 32px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-faint);
+    border-top: 1px dashed var(--border);
+    margin-top: 20px;
+  }
+  footer p { margin: 2px 0; }
+
+  /* ========== 主题切换按钮 ========== */
+  .theme-toggle {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+  }
+
+  /* ========== 工具类 ========== */
+  .small { font-size: 12px; color: var(--text-muted); }
+  .hidden { display: none !important; }
+
+  /* SVG map pin */
+  .map-pin {
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  .map-pin:hover { transform: scale(1.15); transform-origin: center; }
+  .map-pin text { pointer-events: none; }
+
+  /* 滚动条美化 */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  /* 隐藏但保留可访问 */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+  }
+</style>
+</head>
+<body data-page-node-id="kFl8WwLHeDSrwucsuZyvSF">
+
+<!-- ============================ Hero 倒计时 ============================ -->
+<header class="hero" data-page-node-id="CYCkiZcwjEg3haJd0iGrUw">
+  <div class="container" data-page-node-id="8w8z6GIePZn9HBRXEXvlqj">
+    <span class="hero-tag" data-page-node-id="GqyWXhoRgCOWcsrPVwz9To">温州 2 DAYS · 2026.09.09 — 09.10</span>
+    <h1 class="hero-title" data-page-node-id="d1dpih6Bzo1Ui1dEAkiAXg">温州行</h1>
+    <p class="hero-subtitle" data-page-node-id="ePxT0PL1YEB4N5iWAr1AQp">福州↔昆明出发·最终版行程</p>
+
+    <div class="hero-event" data-page-node-id="4GuBbDdSGP3iRWKXmkC7M2">
+      <div class="hero-event-icon" data-page-node-id="6uG9EBHbwgos8rvbWRrUPl">🚄</div>
+      <div class="hero-event-info" data-page-node-id="BPLPBzdNULQxueoCYEuDly">
+        <div class="hero-event-label" data-page-node-id="TynBkb7Fffjy7JzZd0Nhp7">NEXT · 下一程</div>
+        <div class="hero-event-name" data-page-node-id="oshKc2Nxn5cugciuJlSlfi">G1680 福州南 → 温州南</div>
+        <div class="hero-event-time" data-page-node-id="KA2CO5mZwS2wFklNtHGQfE">9/9 周三 09:22 出发 · 一等座 · Asia/Shanghai (UTC+8)</div>
+      </div>
+    </div>
+
+    <div class="countdown" id="countdown" aria-live="polite" data-page-node-id="9mecsTMWkZCuHPzyejInfa">
+      <div class="countdown-unit" data-page-node-id="OUBBC0buCs8A2SOlfgWaYy">
+        <div class="countdown-num" id="cd-d" data-page-node-id="yia6TqT3XTaS8tnPAAxOOc">--</div>
+        <div class="countdown-label" data-page-node-id="EaIslOWJBKGD6kiKvAFSmg">天</div>
+      </div>
+      <div class="countdown-unit" data-page-node-id="vEQYmepo01bBhHpabG95Xe">
+        <div class="countdown-num" id="cd-h" data-page-node-id="y8ZWy4yPCiDxaeU2i1mTzU">--</div>
+        <div class="countdown-label" data-page-node-id="aCArrEExsfp0EH0JaoVssy">时</div>
+      </div>
+      <div class="countdown-unit" data-page-node-id="Vjy8023fFCEVGYRJO2DZRj">
+        <div class="countdown-num" id="cd-m" data-page-node-id="7puYpgdX93xbPwmFK8Wh3L">--</div>
+        <div class="countdown-label" data-page-node-id="8DPtjQdlTciWmDsXLIs8Cn">分</div>
+      </div>
+      <div class="countdown-unit" data-page-node-id="2IPSk2zfCsNwg8DHL3vl2k">
+        <div class="countdown-num" id="cd-s" data-page-node-id="zRrmNWOVFg1d2CKCzSjsaq">--</div>
+        <div class="countdown-label" data-page-node-id="WGS5AO0ABH64PghaYAegUX">秒</div>
+      </div>
+    </div>
+    <div class="countdown-tz" data-page-node-id="XlZFkZOWYvjJKoisyVbc5d">本页面所有时间均为 Asia/Shanghai (UTC+8) · 跨时区打开自动按本地时间换算</div>
+  </div>
+</header>
+
+<main class="container" data-page-node-id="gg3S0cEYyfOnhN0JtEpnxL">
+
+  <!-- ============================ 行程总览地图 ============================ -->
+  <section data-page-node-id="bZR0Nmi3xgSmfLCy3H6Qu2">
+    <div class="section-title" data-page-node-id="Sx5MUX8LJ69aJc1wvYM0e8">行程总览 <span class="section-title-en" data-page-node-id="gr7Ly8C1hAJcxBSyFK7uGQ">OVERVIEW MAP</span></div>
+    <div class="map-card" data-page-node-id="LKBJ4GnyqZDA6nZ1fNPTSc">
+      <svg class="map-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="温州行程总览地图（按实际地理位置绘制）" data-page-node-id="RH0xHmqn9qqFB7qj1Un0hl">
+        <!-- 背景：鹿城区范围示意 -->
+        <rect width="800" height="420" fill="transparent" data-page-node-id="aXv78PHbk7DA2NEo0FqMoy"/>
+
+        <!-- 瓯江（基于实际河道走向，自西向东再折向东南） -->
+        <path d="M -20,20 Q 60,35 140,30 T 300,55 Q 400,80 500,75 T 720,110 L 820,140 L 820,185 Q 720,155 600,165 T 380,145 Q 260,165 160,140 T -20,155 Z"
+              fill="#8fb8d4" opacity="0.22" data-page-node-id="2lRLg7b6Vj04ufT6kxOcQd"/>
+        <path d="M 0,55 Q 100,65 200,60 T 400,80 T 600,100 T 800,130" fill="none" stroke="#5a8aa8" stroke-width="1.5" opacity="0.35" stroke-dasharray="4,5" data-page-node-id="F4LUPbD1X1LzS5S9DxBhnV"/>
+
+        <!-- 江心屿（瓯江中的岛屿，实际位于鹿城区北面江心） -->
+        <ellipse cx="166" cy="39" rx="48" ry="18" fill="#b8d4a0" opacity="0.9" stroke="#7ba360" stroke-width="1.2" data-page-node-id="ksqLYIR1iF2ghBEx5RYm5X"/>
+        <text x="166" y="42" text-anchor="middle" font-size="10" fill="#4a6338" font-family="PingFang SC, sans-serif" font-weight="600" data-page-node-id="Qem8SAkHvyqmfF7FXklbwE">江心屿</text>
+
+        <!-- 五马街历史文化街区（老城核心，实际位于瓯江南岸） -->
+        <rect x="190" y="55" width="120" height="90" rx="12" style="fill: var(--card-soft)" style="stroke: var(--text-faint)" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6" data-page-node-id="2OKI6eejQUTlAWJyiEa5Ff"/>
+        <text x="250" y="72" text-anchor="middle" font-size="10" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="sKJFFLQzYqFEJxCtaEitdC">五马街历史文化街区</text>
+
+        <!-- 温州南站（西南郊，瓯海区潘桥） -->
+        <g transform="translate(17, 222)" data-page-node-id="zALTK7Z0tUzbmZLI3KAWoZ">
+          <rect x="-22" y="-11" width="44" height="22" rx="4" fill="#2a7a3e" stroke="white" stroke-width="1.5" data-page-node-id="roODOotcDAC7wSWhFmBDDL"/>
+          <text x="0" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="o6WxH1h14XwIRahcXtZ2c4">南站</text>
+        </g>
+
+        <!-- 瓯菜排档南站店（南站北侧） -->
+        <circle cx="29" cy="249" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="x9lHUsKHFGnIWp0iPxAxb2"/>
+        <text x="29" y="270" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="VdWqRdOqvDllG6pt3FB0X6">瓯菜排档</text>
+
+        <!-- 温州博物馆（市府路，城市东侧） -->
+        <circle cx="337" cy="156" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="oMdKVui5x8qO8DNURuaC3P"/>
+        <text x="337" y="140" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="aGoZ1tRAOvkm1Ut7jrDEgD">温州博物馆</text>
+
+        <!-- 阿外楼大酒店（瓯江大厦，温州大道南侧） -->
+        <circle cx="283" cy="174" r="5" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="i816ssXQk2Ib1j9rrWgoeG"/>
+        <text x="283" y="194" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="qB7Gg94n6DaDXajUC6YfEk">阿外楼</text>
+
+        <!-- 黄府粥饭（南浦路，城市中南部） -->
+        <circle cx="257" cy="144" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="N50JVWMOK34GT1bQfxrq4G"/>
+        <text x="257" y="162" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="A5OVtBCahmmnR9XKt53nKT">黄府粥饭</text>
+
+        <!-- 瓦市菜场（五马街东北侧） -->
+        <circle cx="231" cy="63" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="VinCWDrLGnQU1ZEoHiCzN2"/>
+        <text x="231" y="48" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="r2bTOiSyZAzFj41Nvjv9zc">瓦市菜场</text>
+
+        <!-- 饱塔文创（公园路，五马街区内） -->
+        <circle cx="240" cy="78" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="vu2BnMcUhPqTEXKUjJPZE3"/>
+        <text x="268" y="81" font-size="9" style="fill: var(--text-muted)" data-page-node-id="dKYn5qycCCh1IZDFJSFMDv">饱塔文创</text>
+
+        <!-- 娟娟早点店（东明路，五马街东南侧） -->
+        <circle cx="260" cy="72" r="4" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="YYxNBpuJiu6Areh5tMqNSv"/>
+        <text x="288" y="68" font-size="9" style="fill: var(--text-muted)" data-page-node-id="zRrmNWOVFg1d2CKCzSjsaq">娟娟早点</text>
+
+        <!-- 酒店（金色五角星，五马街核心） -->
+        <g class="map-pin" transform="translate(223, 84)" data-page-node-id="YVkddXlIThw6e5UWPASqn0">
+          <polygon points="0,-10 2.9,-3.1 10,-3.1 4.1,1.2 6.2,8 0,4 -6.2,8 -4.1,1.2 -10,-3.1 -2.9,-3.1" fill="#c8941f" stroke="#7a5810" stroke-width="0.5" data-page-node-id="3Rl9yLdsHjaPa7nZPpZ5TG"/>
+          <text y="20" text-anchor="middle" font-size="9" fill="#7a5810" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="7dNTqFRsxbXLBBLuyeTfwl">亚朵见野</text>
+        </g>
+
+        <!-- 龙湾机场（东郊，龙湾区海滨） -->
+        <g transform="translate(780, 399)" data-page-node-id="3EpZcS5HT5nDNLk2GvLJS0">
+          <rect x="-28" y="-11" width="56" height="22" rx="4" fill="#1c5e8a" stroke="white" stroke-width="1.5" data-page-node-id="VGC7WDPNggE3yFFo3N84Uj"/>
+          <text x="0" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="ITsPf7Mj4DifHrlVyzwSpH">龙湾机场</text>
+        </g>
+
+        <!-- D1 路线（红色虚线）：南站→瓯菜排档→博物馆→酒店→瓦市→饱塔→黄府粥饭 -->
+        <path d="M 17,222 L 29,249 L 337,156 L 223,84 L 231,63 L 240,78 L 257,144"
+              fill="none" stroke="#c44536" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.75" stroke-linejoin="round" stroke-linecap="round" data-page-node-id="tT3QfQDNpYvUyp1WQZxDFL"/>
+
+        <!-- D2 路线（蓝色虚线）：酒店→娟娟→江心屿→五马街→阿外楼→南站 -->
+        <path d="M 223,84 L 260,72 L 166,39 L 223,84 L 283,174 L 17,222"
+              fill="none" stroke="#4a7c8c" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.75" stroke-linejoin="round" stroke-linecap="round" data-page-node-id="1BxTj80rzChONBq3NcpJrd"/>
+
+        <!-- 指南针 -->
+        <g transform="translate(740, 50)" data-page-node-id="opjSbwujyKbcQMGCjLai4F">
+          <circle r="22" fill="none" style="stroke: var(--text-faint)" stroke-width="1" opacity="0.6" data-page-node-id="aGIUvU05U4drg9wOgF4XbW"/>
+          <polygon points="0,-15 4,0 0,-5 -4,0" fill="#c44536" data-page-node-id="OYirfPO8TzEvge0kcTXu6N"/>
+          <polygon points="0,15 4,0 0,5 -4,0" style="fill: var(--text-faint)" opacity="0.5" data-page-node-id="aXNnAVY9mfi2LH6dQ6xeX3"/>
+          <text y="-25" text-anchor="middle" font-size="10" style="fill: var(--text-muted)" font-family="PingFang SC, sans-serif" font-weight="600" data-page-node-id="AzLcmU16K6vqWK5k8m10bx">N</text>
+        </g>
+
+        <!-- 比例尺（约 10 km） -->
+        <g transform="translate(40, 385)" data-page-node-id="Oi35UGs5puOAXz2CAzeTDk">
+          <line x1="0" y1="0" x2="80" y2="0" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="voOSyzFyo4pDjqh1RraHjc"/>
+          <line x1="0" y1="-4" x2="0" y2="4" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="INhQLLzuDZCACALD1x2Yli"/>
+          <line x1="80" y1="-4" x2="80" y2="4" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="i6f7eFV1saeh63c6Zf97c7"/>
+          <text x="40" y="-8" text-anchor="middle" font-size="9" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="i2MBUA1jCLIAxD6XB4asA9">约 10 km</text>
+        </g>
+
+        <!-- 标题 -->
+        <text x="20" y="24" font-size="11" style="fill: var(--text-muted)" font-family="PingFang SC, sans-serif" letter-spacing="2" data-page-node-id="w9AF9D4v2N2KsuKLiaITkE">WENZHOU · 按实际地理位置绘制</text>
+      </svg>
+
+      <div class="map-legend" data-page-node-id="xvTr0v5iY6iNB3WTweePF3">
+        <div class="legend-item" data-page-node-id="vPHPIBHeX0JeCAvw2DF8q0"><span class="legend-line d1" data-page-node-id="bCtFcrSGW2oiDnvUYFg5J0"></span><span data-page-node-id="Zp4S3RELGsZV6SxOe1jcgo">D1（9/9）路线</span></div>
+        <div class="legend-item" data-page-node-id="ijydhJoSbOVb3pH2TtOmNt"><span class="legend-line d2" data-page-node-id="k0SYiodLGq8MzUGCWJLTVl"></span><span data-page-node-id="9KqoA45YlGeK8WvmQCdTVK">D2（9/10）路线</span></div>
+        <div class="legend-item" data-page-node-id="suDcVUwyFseQWounQ5Yzoi"><span class="legend-star" data-page-node-id="A4xugSvTlr8hpiedxawsYO">★</span><span data-page-node-id="zxTwKLHYINXSYWqyIl94DL">酒店</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 已确认订单 ============================ -->
+  <section data-page-node-id="rS3O8lqMTjb0hTVBoccYJx">
+    <div class="section-title" data-page-node-id="brg4mvVK1J2gSvuZ8fYHRb">已确认订单 <span class="section-title-en" data-page-node-id="KecN3VBQfwG2lYdPBSCY8S">CONFIRMED</span></div>
+    <div class="booking-grid" id="bookingGrid" data-page-node-id="ZDQ3fgWvuCgbO89HK51if6"></div>
+  </section>
+
+  <!-- ============================ 逐日行程 ============================ -->
+  <section data-page-node-id="oowCTPs5oySBubeXfoqlgW">
+    <div class="section-title" data-page-node-id="Ehtf9qVb5yUAX8fPcQbQx9">逐日行程 <span class="section-title-en" data-page-node-id="eM6NYzgEUPL39MWBPJgiCD">DAY BY DAY</span></div>
+
+    <div class="day-tabs" data-page-node-id="TKlEsXAp6yZEnYqmUteslp">
+      <div class="day-tab active" data-day="1" data-page-node-id="LgDxHuQnndKnA29DXI2IsP">D1 · 9月9日<span class="day-tab-date" data-page-node-id="bGDNgPAE7QZNanPDQT86aV">周三 · 抵温</span></div>
+      <div class="day-tab" data-day="2" data-page-node-id="BzJ592gqqvz2kLM8IX59VB">D2 · 9月10日<span class="day-tab-date" data-page-node-id="BLaKvdEcHvXsM16aAkspNW">周四 · 离温</span></div>
+    </div>
+
+    <div class="day-panel active" id="dayPanel-1" data-page-node-id="CltAPAp8FySuRTorMGx3Ao"></div>
+    <div class="day-panel" id="dayPanel-2" data-page-node-id="VstubSGmyvzilMdLmebsiK"></div>
+  </section>
+
+  <!-- ============================ 餐饮推荐 ============================ -->
+  <section data-page-node-id="CXQS5VUvTbT5fxyr91lrjN">
+    <div class="section-title" data-page-node-id="pORF3FYZPgDPLa6THwVI46">温州味道 <span class="section-title-en" data-page-node-id="tCEOvcCvulEHbBuyKuVoNa">EAT &amp; DRINK</span></div>
+
+    <div class="restaurant-filter" id="restaurantFilter" data-page-node-id="NSpDvIEH8QqKGBSFKQNons">
+      <button class="filter-btn active" data-filter="all" data-page-node-id="bGQRnvcUiCtTZNDcHdHgS0">全部</button>
+      <button class="filter-btn" data-filter="recommended" data-page-node-id="vvRFJe9Yior9vB1VOzOGiN">★ 推荐</button>
+      <button class="filter-btn" data-filter="breakfast" data-page-node-id="8C70Ra3MU1DaTsIKcWVWtr">早餐</button>
+      <button class="filter-btn" data-filter="snack" data-page-node-id="53xa7XXvVYaaCI7Qlj42jx">小吃</button>
+      <button class="filter-btn" data-filter="dinner" data-page-node-id="49jA8wbdgQBOq0uqAoTcgI">正餐</button>
+      <button class="filter-btn" data-filter="sweet" data-page-node-id="vpfiSod2sAHJDmz0vAOM6o">甜品</button>
+      <button class="filter-btn" data-filter="tea" data-page-node-id="2LiuH3w1sZgoehMGHTF9KA">茶饮</button>
+    </div>
+
+    <div class="restaurant-grid" id="restaurantGrid" data-page-node-id="NJexB4P4SD3h2QY6OtvHhk"></div>
+  </section>
+
+  <!-- ============================ 待办清单 ============================ -->
+  <section data-page-node-id="ShdbTCPPwtVOsCnG8wMBnv">
+    <div class="section-title" data-page-node-id="Hl1uk0GxypoBHYUYv6HhaY">待办清单 <span class="section-title-en" data-page-node-id="glyDe8rO4RpEI9lpGwZef7">TODO</span></div>
+    <div class="todo-list" id="todoList" data-page-node-id="OSJaCLWVNcYt5sijnEqh76"></div>
+    <p class="small" style="margin-top:10px;" data-page-node-id="ncUTnhjoMAk4Ng40ZFcED2">勾选状态只存在你自己的浏览器里，换设备不同步。</p>
+  </section>
+
+  <!-- ============================ 实用贴士 ============================ -->
+  <section data-page-node-id="ziwzB9UGRuT8tyujBMPBBk">
+    <div class="section-title" data-page-node-id="chcfXE09agTHhEyNn6eYCO">实用贴士 <span class="section-title-en" data-page-node-id="FTtvVYNPNEWt9Ch4V7ARbY">TIPS</span></div>
+    <div class="tip-grid" id="tipGrid" data-page-node-id="zpWeqmISXd6I2wNBe8A3d6"></div>
+  </section>
+
+</main>
+
+<footer data-page-node-id="7cgMNBbRiWYRJue3RylfXc">
+  <p data-page-node-id="mYgRTEjyMqzGvBFPZA0xCp">温州行 · 终稿</p>
+  <p data-page-node-id="TKsbBoaBvmUG0hN10cV2rl">所有时间 Asia/Shanghai (UTC+8) · 公开页面不含任何确认号/证件号/房间号/手机号</p>
+</footer>
+
+<button class="theme-toggle" id="themeToggle" aria-label="切换主题" data-page-node-id="UMs91wCJ5mL47UozEqFts9">🌗</button>
+
+<script>
+/* ============================================================
+   数据
+   ============================================================ */
+const TARGET = '2026-09-09T09:22:00+08:00'; // G1680 福州南出发
+
+const TRANSPORT = [
+  { type:'train', tag:'去程 · 你', title:'G1680 福州南 → 温州南', row:['福州南','温州南'], time:'09:22 → 11:10', date:'9/9 周三', sub:'一等座 01车 09A号 · 靠窗 · 检票口 8 · 历时 1h48m · ¥178' },
+  { type:'flight', tag:'去程 · 妈妈', title:'MU9661 昆明长水 → 温州龙湾 T2', row:['昆明长水','温州龙湾 T2'], time:'16:10 → 18:45', date:'9/9 周三', sub:'公务舱 I 舱 · 波音 738（窄体）· 托运 30KG · 热正餐 · 总价 ¥1100' },
+  { type:'train', tag:'回程 · 你', title:'G1677 温州南 → 福州', row:['温州南','福州'], time:'20:04 → 22:09', date:'9/10 周四', sub:'一等座 02车 02A号 · 靠窗 · 检票口 4/6 · 历时 2h05m · ¥180' },
+  { type:'train', tag:'回程 · 妈妈', title:'D3212 温州南 → 永康南', row:['温州南','永康南'], time:'20:48 → 21:38', date:'9/10 周四', sub:'二等座 03车 16D号 · 过道 · 检票口 3/5 · 历时 50m · ¥52' },
+];
+
+const HOTEL = {
+  type:'hotel', tag:'住宿',
+  title:'温州五马街步行街亚朵见野酒店',
+  address:'温州市鹿城区五马街 168-1 号（步行街中央，正门在大同巷）',
+  phone:'前台 0577-28826688',
+  checkIn:'9/9 入住', checkOut:'9/10 离店',
+  room:'高级双床房 · 27㎡ · 1.2m+1.2m 双床 · 外窗',
+  note:'订单含「无早餐」，但你持有早餐券 · D2 可轻食后再出门 · 订单金额 ¥421'
+};
+
+const D1 = [
+  { time:'11:10', title:'抵达温州南站', desc:'出站约 5 min，行李随行', nav:'温州南站', icon:'🚄' },
+  { time:'11:30', title:'瓯菜排档午餐', desc:'动车南站店，行李放后备箱；推荐沙蟹生、三层肉、油条汤', nav:'瓯菜排档动车南站店', icon:'🍤', tag:'eat' },
+  { time:'13:00', title:'前往温州博物馆', desc:'网约车约 20 min', nav:'温州博物馆', icon:'🚗' },
+  { time:'13:30', title:'温州博物馆', desc:'凭身份证刷证入馆（免费），行李暂存游客中心；周二至周日 09:00–17:00，周一闭馆', nav:'温州博物馆', icon:'🏛️', tag:'book' },
+  { time:'16:15', title:'取行李回酒店', desc:'网约车约 15 min', nav:'亚朵见野酒店五马街', icon:'🚗' },
+  { time:'16:30', title:'办理入住 · 休整', desc:'亚朵见野酒店 五马街 168-1 号', nav:null, icon:'🏨' },
+  { time:'17:00', title:'瓦市菜场 + 瓦市巷', desc:'妙英薄饼、胖子手撕鸡、吴记熟铺、大王灯盏糕现买现吃', nav:'瓦市菜场', icon:'🥡' },
+  { time:'17:45', title:'饱塔文创 · 盖章', desc:'公园路 A8 号，09:30–22:30，任意消费可盖章', nav:'饱塔文创公园路', icon:'📒' },
+  { time:'18:30', title:'回酒店', desc:'等妈妈航班落地', nav:null, icon:'🏨' },
+  { time:'19:30', title:'妈妈到酒店', desc:'MU9661 18:45 落地，机场到酒店约 40 min', nav:null, icon:'🛬' },
+  { time:'20:00', title:'逛五马街 + 黄府粥饭晚餐', desc:'南浦路 549 号，砂锅粥、煎饺；推荐夏唯奶茶（谢池巷 198 号）外带', nav:'黄府粥饭南浦路', icon:'🥘' },
+];
+
+const D2 = [
+  { time:'08:30', title:'起床', desc:'酒店内', nav:null, icon:'⏰' },
+  { time:'08:45', title:'酒店早餐（用券 · 轻食）', desc:'水果/面包/咖啡垫肚，留胃给外面', nav:null, icon:'🥐' },
+  { time:'09:40', title:'前往娟娟早点店', desc:'东明路 124 号，网约车约 10 min', nav:'娟娟早点店', icon:'🚗' },
+  { time:'10:00', title:'糯米饭 + 咸豆浆', desc:'米其林必比登，03:30 起营业', nav:null, icon:'🍚', tag:'eat' },
+  { time:'10:30', title:'前往江心屿', desc:'望江东路 119 号，网约车约 10 min', nav:'江心屿', icon:'🚗' },
+  { time:'11:00', title:'江心屿游玩', desc:'门票 ¥30 含轮渡，2.5 h 充裕；19:30 停止入园', nav:'江心屿', icon:'🏝️', tag:'book' },
+  { time:'13:30', title:'返回五马街', desc:'网约车', nav:null, icon:'🚗' },
+  { time:'14:00', title:'长人馄饨铺', desc:'解放街 195 号，百年非遗；推荐鲜肉馄饨、锅贴', nav:'长人馄饨铺解放街', icon:'🥟', tag:'eat' },
+  { time:'15:00', title:'噔噔哆杏仁腐', desc:'五马街新街公寓，解暑甜品', nav:'噔噔哆杏仁腐五马街', icon:'🍧', tag:'eat' },
+  { time:'15:30', title:'县前汤圆店 · 一鸣真鲜奶吧', desc:'公园路 3 号，鲜肉/麻心汤圆；奶吧带鲜奶车上喝', nav:'县前汤圆店公园路', icon:'🍡', tag:'eat' },
+  { time:'16:00', title:'夏唯外卖下单', desc:'备注 17:00 送达酒店；推荐老红糖珍珠奶茶 + 鲜芋燕麦 + 椰香松饼', nav:null, icon:'📱' },
+  { time:'16:30', title:'回酒店收拾', desc:'', nav:null, icon:'🧳' },
+  { time:'17:00', title:'取外卖 + 退房', desc:'', nav:null, icon:'🏨' },
+  { time:'17:15', title:'前往阿外楼', desc:'瓯江大厦 3 楼，网约车约 15 min；赶 17:00 开餐、20:00 收档', nav:'阿外楼大酒店', icon:'🚗', tag:'warn' },
+  { time:'17:30', title:'阿外楼晚餐', desc:'正餐压轴，慢慢吃', nav:'阿外楼大酒店', icon:'🥘', tag:'eat' },
+  { time:'19:00', title:'前往温州南站', desc:'网约车约 25 min', nav:'温州南站', icon:'🚗' },
+  { time:'19:30', title:'抵达温州南站', desc:'', nav:null, icon:'🚄' },
+  { time:'20:04', title:'G1677 回福州', desc:'', nav:null, icon:'🚄' },
+  { time:'20:48', title:'D3212 妈妈去永康', desc:'', nav:null, icon:'🚄' },
+];
+
+const RESTAURANTS = [
+  // ★ 推荐
+  { name:'娟娟早点店', cat:'breakfast', recommended:true, address:'鹿城区东明路 124 号', hours:'03:30–11:30', nav:'娟娟早点店', dishes:[{n:'糯米饭',m:true},{n:'咸豆浆',m:true},{n:'油条'},{n:'饭团'}] },
+  { name:'长人馄饨铺', cat:'snack', recommended:true, address:'鹿城区解放街 195 号', hours:'06:00–22:00', nav:'长人馄饨铺解放街', dishes:[{n:'鲜肉馄饨',m:true},{n:'锅贴馄饨',m:true}] },
+  { name:'陈辉鱼圆', cat:'snack', recommended:true, address:'鹿城区曹仙巷 54 号', hours:'全天', nav:'陈辉鱼圆', dishes:[{n:'鱼圆汤',m:true},{n:'鱼圆粉干'},{n:'敲鱼'}] },
+  { name:'大王灯盏糕', cat:'snack', recommended:true, address:'鹿城区解放街 471 号', hours:'08:30–18:00', nav:'大王灯盏糕解放街', dishes:[{n:'灯盏糕 猪肉馅',m:true},{n:'灯盏糕 萝卜丝馅'}] },
+  { name:'噔噔哆杏仁腐', cat:'sweet', recommended:true, address:'鹿城区五马街新街公寓', hours:'10:00–22:00', nav:'噔噔哆杏仁腐五马街', dishes:[{n:'杏仁腐',m:true},{n:'椰奶冻'},{n:'水果杯'}] },
+  { name:'县前汤圆店', cat:'sweet', recommended:true, address:'鹿城区公园路 3 号', hours:'06:00–22:00', nav:'县前汤圆店公园路', dishes:[{n:'鲜肉汤圆',m:true},{n:'麻心汤圆',m:true},{n:'芝麻汤圆'}] },
+  { name:'黄府粥饭', cat:'dinner', recommended:true, address:'鹿城区南浦路 549 号', hours:'17:00–次日03:00', nav:'黄府粥饭南浦路', dishes:[{n:'砂锅粥',m:true},{n:'煎饺'},{n:'酱萝卜'}] },
+  { name:'守英猪脏粉', cat:'snack', recommended:true, address:'鹿城区仓桥街 199 号', hours:'24 h', nav:'守英猪脏粉仓桥街', dishes:[{n:'猪脏粉',m:true},{n:'粉干'},{n:'大肠头'}] },
+  { name:'胖子手撕鸡', cat:'snack', recommended:true, address:'鹿城区瓦市巷 92 号', hours:'全天', nav:'胖子手撕鸡瓦市巷', dishes:[{n:'手撕鸡',m:true},{n:'鸡爪'},{n:'鸡杂'}] },
+  { name:'夏唯', cat:'tea', recommended:true, address:'鹿城区谢池巷 198 号（开太店）', hours:'09:30–23:00', nav:'夏唯开太店谢池巷', dishes:[{n:'老红糖珍珠奶茶',m:true},{n:'鲜芋燕麦',m:true},{n:'招牌松饼 椰香',m:true}] },
+  // 备选
+  { name:'老温州馄饨担', cat:'snack', recommended:false, address:'鹿城区飞霞南路 535 号', hours:'全天', nav:'老温州馄饨担', dishes:[{n:'鲜肉馄饨'},{n:'蛋花汤'}] },
+  { name:'巷子里老杨饭团', cat:'snack', recommended:false, address:'鹿城区丰和巷 27 号', hours:'06:00–13:00', nav:'老杨饭团丰和巷', dishes:[{n:'紫米饭团'},{n:'肉松饭团'},{n:'油条饭团'}] },
+  { name:'高公桥老店', cat:'snack', recommended:false, address:'鹿城区高公桥', hours:'全天', nav:'高公桥瘦肉丸', dishes:[{n:'瘦肉丸'},{n:'鱼丸'},{n:'粉干'}] },
+  { name:'瑞辉馄饨铺', cat:'snack', recommended:false, address:'鹿城区人民中路 185 号', hours:'06:00–00:30', nav:'瑞辉馄饨铺', dishes:[{n:'鲜肉馄饨'},{n:'锅贴'}] },
+  { name:'东瓯泡泡', cat:'snack', recommended:false, address:'海坛商业广场 106-5', hours:'17:00–01:00', nav:'东瓯泡泡', dishes:[{n:'油炸泡泡'}] },
+  { name:'阿婆敲馄饨', cat:'snack', recommended:false, address:'鹿城区东港路（较远，建议专程）', hours:'全天', nav:'阿婆敲馄饨', dishes:[{n:'鲜肉馄饨'}] },
+  { name:'老包炊饭', cat:'breakfast', recommended:false, address:'鹿城区瓜棚下 18 号', hours:'05:30–11:00', nav:'老包炊饭', dishes:[{n:'炊饭'},{n:'糯米饭'},{n:'咸豆浆'}] },
+  { name:'惠民早餐店', cat:'breakfast', recommended:false, address:'鹿城区惠民路 1358 号', hours:'05:30–11:00', nav:'惠民早餐店', dishes:[{n:'糯米饭'},{n:'咸豆浆'},{n:'油条'}] },
+  { name:'吴记熟铺', cat:'snack', recommended:false, address:'鹿城区瓦市巷 123 号', hours:'08:00–19:00', nav:'吴记熟铺瓦市巷', dishes:[{n:'卤味拼盘'},{n:'糟货'},{n:'酱油肉'}] },
+  { name:'喝杯鸳鸯', cat:'tea', recommended:false, address:'鹿城区东浦小村 4-109', hours:'09:00–22:00', nav:'喝杯鸳鸯东浦小村', dishes:[{n:'鸳鸯奶茶'},{n:'菠萝油'},{n:'丝袜奶茶'}] },
+  { name:'满吨吨', cat:'tea', recommended:false, address:'鹿城区德政东路 59 号璟之华庭', hours:'11:00–20:00', nav:'满吨吨德政东路', dishes:[{n:'手作茶饮'},{n:'黑糖珍珠鲜奶'}] },
+  { name:'永嘉山头麦面老店', cat:'dinner', recommended:false, address:'鹿城区沧河巷', hours:'11:00–20:00', nav:'永嘉山头麦面沧河巷', dishes:[{n:'酱油肉炒蛋麦条',m:true}] },
+  { name:'妙英薄饼', cat:'snack', recommended:false, address:'瓦市菜场内', hours:'06:00–18:00', nav:'瓦市菜场', dishes:[{n:'甜薄饼'},{n:'咸薄饼'}] },
+  { name:'亨乾口黄珠英三鲜面', cat:'dinner', recommended:false, address:'鹿城区高公桥', hours:'11:00–20:00', nav:'亨乾口黄珠英三鲜面', dishes:[{n:'三鲜面',m:true}] },
+];
+
+const TODOS = [
+  { text:'出发前一晚把 MU9661 航班信息发给妈妈', meta:'含起飞时间、航站楼、联系电话' },
+  { text:'出门前确认两人都带身份证原件', meta:'博物馆入馆、酒店登记都要' },
+  { text:'手机里装好「高德地图」App', meta:'本页面所有地点点击后用它导航' },
+  { text:'D1 出门前把酒店地址存进收藏', meta:'五马街 168-1 号' },
+  { text:'D2 16:00 在夏唯 App/小程序下单', meta:'备注 17:00 送达酒店 · 老红糖珍珠奶茶 + 鲜芋燕麦 + 椰香松饼' },
+  { text:'D2 退房前提前 30 min 提醒妈妈收外卖', meta:'17:00 准时取' },
+  { text:'随身带充电宝 + 雨伞', meta:'9 月温州多阵雨' },
+  { text:'返程前给妈妈发 D3212 检票口和发车时间', meta:'20:48 发车，建议 19:30 前到南站' },
+];
+
+const TIPS = [
+  { icon:'🌧️', title:'天气', content:'9 月温州阵雨多发，随身折叠伞；鞋选防滑款（瓦市菜场地面易滑）。' },
+  { icon:'💵', title:'现金 / 支付', content:'老字号小吃基本支持扫码付款，零钱备 100 元足够以防万一。' },
+  { icon:'🧳', title:'行李寄存', content:'温州南站有智能寄存柜（小件 5 元/4 h，大件 10 元/天）；博物馆游客中心可免费暂存。' },
+  { icon:'🚗', title:'打车预算', content:'全程网约车，温州南到五马街约 35 元、机场到酒店约 80–100 元。S1 机场线本次不推荐（行李拖来拖去更累）。' },
+  { icon:'🏛️', title:'博物馆', content:'免费，刷身份证入馆；周二至周日 09:00–17:00，周一闭馆。9/9 周三正常开放。' },
+  { icon:'🏝️', title:'江心屿', content:'¥30 含往返轮渡；旺季周末 19:30 停止入园，工作日略宽。建议一上岛先去东园，再逛西园。' },
+  { icon:'📞', title:'应急联系', content:'酒店前台、博物馆咨询电话都已在「已确认订单」区列出。' },
+  { icon:'🌙', title:'夜间安全', content:'五马街、瓦市、纱帽河夜间人多，注意随身物品。' },
+];
+
+/* ============================================================
+   渲染
+   ============================================================ */
+
+function navURL(place) {
+  // 高德地图唤起：name + city = 自动检索
+  return 'https://uri.amap.com/navigation?to=' + encodeURIComponent(place) + '&mode=car&src=wenzhoutrip&coordinate=gaode&callnative=1';
+}
+
+function renderBookings() {
+  const html = TRANSPORT.map(b => `
+    <div class="booking-card">
+      <div class="booking-icon ${b.type}">${b.type==='train'?'🚄':b.type==='flight'?'✈️':'🏨'}</div>
+      <div class="booking-body">
+        <div class="booking-head">
+          <div class="booking-title">${b.title}</div>
+          <span class="booking-tag">${b.tag}</span>
+        </div>
+        <div class="booking-row"><span>${b.row[0]}</span><span class="arrow">→</span><span>${b.row[1]}</span></div>
+        <div class="booking-meta">
+          <span>${b.date}</span>
+          <span>${b.time}</span>
+          <span>${b.sub}</span>
+        </div>
+      </div>
+    </div>
+  `).join('') + `
+    <div class="booking-card">
+      <div class="booking-icon hotel">🏨</div>
+      <div class="booking-body">
+        <div class="booking-head">
+          <div class="booking-title">${HOTEL.title}</div>
+          <span class="booking-tag">${HOTEL.tag}</span>
+        </div>
+        <div class="booking-row"><span>${HOTEL.address}</span></div>
+        <div class="booking-meta">
+          <span>${HOTEL.checkIn}</span>
+          <span>${HOTEL.checkOut}</span>
+          <span>${HOTEL.room}</span>
+        </div>
+        <div class="booking-note">${HOTEL.note}</div>
+      </div>
+    </div>
+  `;
+  document.getElementById('bookingGrid').innerHTML = html;
+}
+
+function renderDayPanel(day, data) {
+  const summary = day === 1
+    ? '抵温 → 博物馆 → 瓦市逛吃 → 饱塔文创盖章 → 五马街 + 黄府粥饭'
+    : '糯米饭 → 江心屿 → 五马街小吃 → 阿外楼正餐 → 各自回程';
+
+  const dayColor = day === 1 ? 'var(--d1)' : 'var(--d2)';
+
+  // 提取所有可导航地点
+  const navStops = data.filter(d => d.nav);
+  const navStopsEncoded = navStops.map(d => encodeURIComponent(d.nav)).join(',');
+
+  // AMap 多点导航（via 最多支持几个，我们只用 from/to + first via）
+  // 简化：用 from=第一站, to=最后站, via=中间站拼接
+  let multiNavURL = '';
+  if (navStops.length >= 2) {
+    const from = encodeURIComponent(navStops[0].nav);
+    const to = encodeURIComponent(navStops[navStops.length-1].nav);
+    const via = navStops.slice(1,-1).map(d=>encodeURIComponent(d.nav)).join(',');
+    multiNavURL = 'https://uri.amap.com/navigation?from=' + from + '&to=' + to + (via?'&via='+via:'') + '&mode=car&src=wenzhoutrip&coordinate=gaode&callnative=1';
+  }
+
+  const items = data.map((item, i) => {
+    let tagHTML = '';
+    if (item.tag === 'book') tagHTML = '<span class="timeline-tag book">需提前订</span>';
+    if (item.tag === 'warn') tagHTML = '<span class="timeline-tag warn">注意</span>';
+    if (item.tag === 'eat') tagHTML = '<span class="timeline-tag">吃</span>';
+
+    const navAttr = item.nav ? `data-nav="${item.nav}"` : '';
+    const cursorStyle = item.nav ? '' : 'cursor:default;';
+
+    return `
+      <div class="timeline-item is-d${day}">
+        <div class="timeline-time">${item.time}</div>
+        <div class="timeline-body" ${navAttr} style="${cursorStyle}">
+          <div class="timeline-title"><span class="timeline-title-icon">${item.icon||''}</span>${item.title}</div>
+          ${item.desc ? `<div class="timeline-desc">${item.desc}</div>` : ''}
+          ${tagHTML ? `<div class="timeline-tags">${tagHTML}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // SVG 小地图
+  const svg = renderDaySVG(day, data);
+
+  document.getElementById('dayPanel-' + day).innerHTML = `
+    <div class="day-head" style="border-left: 3px solid ${dayColor};">
+      <div class="day-head-date">${day === 1 ? '9/9 周三' : '9/10 周四'}</div>
+      <div class="day-head-title">${day === 1 ? '抵达日' : '离开日'}</div>
+      <div class="day-head-summary">${summary}</div>
+    </div>
+
+    <div class="day-controls">
+      <button class="btn" data-day="${day}" id="toggleRoute${day}">
+        <span>📍</span><span>当日路线地图</span>
+      </button>
+      <a class="btn btn-primary" data-day="${day}" href="${multiNavURL}" target="_blank" rel="noopener">
+        <span>🚗</span><span>一键导航全天</span>
+      </a>
+    </div>
+
+    <div class="day-route-map" id="routeMap${day}">
+      <div class="day-route-map-title">${day === 1 ? 'D1' : 'D2'} 路线 · 数字对应下方时间轴</div>
+      ${svg}
+    </div>
+
+    <div class="timeline">${items}</div>
+  `;
+
+  // 绑定展开按钮
+  document.getElementById('toggleRoute' + day).addEventListener('click', () => {
+    document.getElementById('routeMap' + day).classList.toggle('show');
+  });
+
+  // 绑定导航点击
+  document.querySelectorAll('#dayPanel-' + day + ' .timeline-body[data-nav]').forEach(el => {
+    el.addEventListener('click', () => {
+      const place = el.getAttribute('data-nav');
+      window.open(navURL(place), '_blank');
+    });
+  });
+}
+
+function renderDaySVG(day, data) {
+  // 简化的小路线图，按时间顺序连点
+  const w = 400, h = 280;
+  const navData = data.filter(d => d.nav);
+  const n = navData.length;
+  if (n === 0) return '';
+
+  // 用曲线把点串起来
+  const margin = 30;
+  const stepX = (w - margin*2) / Math.max(1, n-1);
+  const points = navData.map((d, i) => ({
+    x: margin + i * stepX,
+    y: h/2 + (i % 2 === 0 ? -30 : 30),
+    name: d.title.split(/[（(]/)[0].slice(0, 6),
+    time: d.time
+  }));
+
+  const color = day === 1 ? '#c44536' : '#4a7c8c';
+  const colorClass = day === 1 ? 'is-d1' : 'is-d2';
+
+  let path = `M ${points[0].x},${points[0].y}`;
+  for (let i = 1; i < points.length; i++) {
+    const midX = (points[i-1].x + points[i].x) / 2;
+    path += ` Q ${midX},${points[i-1].y + (i%2===0?-40:40)} ${points[i].x},${points[i].y}`;
+  }
+
+  const pins = points.map((p, i) => `
+    <g>
+      <circle cx="${p.x}" cy="${p.y}" r="11" fill="${color}" stroke="white" stroke-width="2"/>
+      <text x="${p.x}" y="${p.y+3}" text-anchor="middle" font-size="10" fill="white" font-weight="700">${i+1}</text>
+      <text x="${p.x}" y="${p.y + (i%2===0?-18:28)}" text-anchor="middle" font-size="10" style="fill: var(--text)" font-family="PingFang SC, sans-serif">${p.name}</text>
+      <text x="${p.x}" y="${p.y + (i%2===0?-30:40)}" text-anchor="middle" font-size="8" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif">${p.time}</text>
+    </g>
+  `).join('');
+
+  return `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+    ${pins}
+  </svg>`;
+}
+
+function renderRestaurants(filter) {
+  const list = filter === 'all' ? RESTAURANTS : RESTAURANTS.filter(r => filter === 'recommended' ? r.recommended : r.cat === filter);
+  const html = list.map(r => {
+    const dishes = r.dishes.map(d => `<span class="dish-item${d.m?' must':''}">${d.n}</span>`).join('');
+    return `
+      <div class="restaurant-card${r.recommended?' recommended':''}" data-cat="${r.cat}">
+        <div class="restaurant-head">
+          <div class="restaurant-name">${r.name}</div>
+          <span class="restaurant-tag">${catLabel(r.cat)}</span>
+          ${r.recommended ? '<span class="restaurant-star">★</span>' : ''}
+        </div>
+        <div class="restaurant-meta">
+          <div>📍 ${r.address}</div>
+          <div>🕒 ${r.hours}</div>
+        </div>
+        <div class="restaurant-dishes">
+          <div class="restaurant-dishes-label">必吃 / 推荐</div>
+          ${dishes}
+        </div>
+        <div class="restaurant-actions">
+          <a class="btn" href="${navURL(r.nav)}" target="_blank" rel="noopener">📍 高德导航</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('restaurantGrid').innerHTML = html || '<div class="small">该分类暂无店家</div>';
+}
+
+function catLabel(c) {
+  return { breakfast:'早餐', snack:'小吃', dinner:'正餐', sweet:'甜品', tea:'茶饮' }[c] || c;
+}
+
+function loadTodoState() {
+  try {
+    const raw = localStorage.getItem('wenzhou-todos');
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) { return []; }
+}
+
+function saveTodoState(state) {
+  try { localStorage.setItem('wenzhou-todos', JSON.stringify(state)); } catch (e) {}
+}
+
+function renderTodos() {
+  const state = loadTodoState();
+  document.getElementById('todoList').innerHTML = TODOS.map((t, i) => {
+    const done = state[i] === true;
+    return `
+    <div class="todo-item${done ? ' done' : ''}" data-todo="${i}">
+      <div class="todo-check${done ? ' checked' : ''}" role="checkbox" aria-checked="${done}" tabindex="0">
+        ${done ? '<svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>' : ''}
+      </div>
+      <div class="todo-text">
+        ${t.text}
+        ${t.meta ? `<div class="todo-meta">${t.meta}</div>` : ''}
+      </div>
+    </div>
+  `;
+  }).join('');
+
+  document.querySelectorAll('#todoList .todo-check').forEach(el => {
+    const toggle = () => {
+      const item = el.closest('.todo-item');
+      const idx = parseInt(item.dataset.todo, 10);
+      const state = loadTodoState();
+      state[idx] = !state[idx];
+      saveTodoState(state);
+      renderTodos();
+    };
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+}
+
+function renderTips() {
+  document.getElementById('tipGrid').innerHTML = TIPS.map(t => `
+    <div class="tip-card">
+      <div class="tip-title">${t.icon} ${t.title}</div>
+      <div class="tip-content">${t.content}</div>
+    </div>
+  `).join('');
+}
+
+/* ============================================================
+   倒计时
+   ============================================================ */
+function updateCountdown() {
+  const now = Date.now();
+  const target = new Date(TARGET).getTime();
+  let diff = target - now;
+  const elD = document.getElementById('cd-d');
+  const elH = document.getElementById('cd-h');
+  const elM = document.getElementById('cd-m');
+  const elS = document.getElementById('cd-s');
+
+  if (diff <= 0) {
+    elD.textContent = '0'; elH.textContent = '00';
+    elM.textContent = '00'; elS.textContent = '00';
+    document.querySelector('.hero-event-label').textContent = '已出发';
+    return;
+  }
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
+  elD.textContent = days;
+  elH.textContent = String(hours).padStart(2,'0');
+  elM.textContent = String(minutes).padStart(2,'0');
+  elS.textContent = String(seconds).padStart(2,'0');
+}
+
+/* ============================================================
+   主题（白天黑夜）
+   ============================================================ */
+function applyTheme() {
+  const saved = localStorage.getItem('wenzhou-theme');
+  if (saved === 'light' || saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', saved);
+  } else {
+    // 按当前本地时间判断
+    const h = new Date().getHours();
+    const auto = (h >= 6 && h < 18) ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', auto);
+  }
+  const meta = document.getElementById('theme-color-meta');
+  if (meta) meta.content = getComputedStyle(document.body).backgroundColor;
+}
+
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('wenzhou-theme', next);
+  const meta = document.getElementById('theme-color-meta');
+  if (meta) meta.content = getComputedStyle(document.body).backgroundColor;
+});
+
+/* ============================================================
+   每日 Tab 切换
+   ============================================================ */
+document.querySelectorAll('.day-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.day-tab').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('.day-panel').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('dayPanel-' + t.dataset.day).classList.add('active');
+  });
+});
+
+/* ============================================================
+   餐饮筛选
+   ============================================================ */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderRestaurants(btn.dataset.filter);
+  });
+});
+
+/* ============================================================
+   启动
+   ============================================================ */
+applyTheme();
+renderBookings();
+renderDayPanel(1, D1);
+renderDayPanel(2, D2);
+renderRestaurants('all');
+renderTodos();
+renderTips();
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// 每分钟检查主题切换
+setInterval(() => {
+  if (!localStorage.getItem('wenzhou-theme')) applyTheme();
+}, 60000);
+</script>
+</body>
+</html>
