@@ -1,0 +1,13 @@
+{
+  "name": "wenzhou-trip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "温州 2 天 1 夜 · 旅行手册",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}
