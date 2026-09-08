@@ -238,10 +238,10 @@
 | Cloudflare Token 页面找不到 | 右上角头像 → My Profile → API Tokens，必须先登录 |
 | Actions 红叉了 | 点进失败的 workflow → 点红色步骤 → 把日志截图发我 |
 | 部署成功但打不开链接 | 看 Workers & Pages 列表里有没有 wenzhou-trip，有的话等 30 秒再访问（DNS 生效） |
-| 链接 404 | 看看是不是 Workers 列表里没这个 worker，第 5 步可能没真跑成功 |
+| 链接 404 | 看看是不是 Workers 列表里没这个 worker，第 5 步可能没真跑成功 | 
 
 ---
 
 ## 附：手机离线看页面（不用部署也能用）
 
-把 `public/index.html` 微信发到「文件传输助手」 → 浏览器打开 → Safari/Chrome 菜单 → 添加到主屏幕。以后离线也能点开。 
+把 `public/index.html` 微信发到「文件传输助手」 → 浏览器打开 → Safari/Chrome 菜单 → 添加到主屏幕。以后离线也能点开。  
