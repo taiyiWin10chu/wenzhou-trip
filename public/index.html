@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="WnfoQh0V31Jlfwjo56sqX7">
 <meta name="format-detection" content="telephone=no" data-page-node-id="A0oG14nYKp0fiDhGugEGMx">
 <meta name="theme-color" content="#faf6ee" id="theme-color-meta" data-page-node-id="wUJLsaGj5cnjIr6Q6lTDHt">
-<title>温州 2 天 1 夜 · 旅行手册</title>
+<title>温州行</title>
 <style>
   /* ========== 主题变量 ========== */
   :root {
@@ -597,10 +597,43 @@
     font-weight: 600;
   }
   .todo-text { flex: 1; }
+  .todo-item.done .todo-text {
+    text-decoration: line-through;
+    color: var(--text-faint);
+  }
   .todo-meta {
     font-size: 11px;
     color: var(--text-faint);
     margin-top: 2px;
+  }
+  .todo-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-strong);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 4px;
+    background: var(--card);
+    transition: all 0.15s;
+  }
+  .todo-check:hover { border-color: var(--accent); }
+  .todo-check.checked {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .todo-check svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   /* ========== 实用贴士 ========== */
@@ -691,8 +724,8 @@
 <header class="hero" data-page-node-id="CYCkiZcwjEg3haJd0iGrUw">
   <div class="container" data-page-node-id="8w8z6GIePZn9HBRXEXvlqj">
     <span class="hero-tag" data-page-node-id="GqyWXhoRgCOWcsrPVwz9To">温州 2 DAYS · 2026.09.09 — 09.10</span>
-    <h1 class="hero-title" data-page-node-id="d1dpih6Bzo1Ui1dEAkiAXg">两天一夜，跟着味蕾走</h1>
-    <p class="hero-subtitle" data-page-node-id="ePxT0PL1YEB4N5iWAr1AQp">母女同游·福州↔昆明出发·最终版行程</p>
+    <h1 class="hero-title" data-page-node-id="d1dpih6Bzo1Ui1dEAkiAXg">温州行</h1>
+    <p class="hero-subtitle" data-page-node-id="ePxT0PL1YEB4N5iWAr1AQp">福州↔昆明出发·最终版行程</p>
 
     <div class="hero-event" data-page-node-id="4GuBbDdSGP3iRWKXmkC7M2">
       <div class="hero-event-icon" data-page-node-id="6uG9EBHbwgos8rvbWRrUPl">🚄</div>
@@ -731,95 +764,95 @@
   <section data-page-node-id="bZR0Nmi3xgSmfLCy3H6Qu2">
     <div class="section-title" data-page-node-id="Sx5MUX8LJ69aJc1wvYM0e8">行程总览 <span class="section-title-en" data-page-node-id="gr7Ly8C1hAJcxBSyFK7uGQ">OVERVIEW MAP</span></div>
     <div class="map-card" data-page-node-id="LKBJ4GnyqZDA6nZ1fNPTSc">
-      <svg class="map-svg" viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="温州行程总览地图" data-page-node-id="RH0xHmqn9qqFB7qj1Un0hl">
-        <!-- 背景底色 -->
-        <rect width="800" height="540" fill="transparent" data-page-node-id="aXv78PHbk7DA2NEo0FqMoy"/>
+      <svg class="map-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="温州行程总览地图（按实际地理位置绘制）" data-page-node-id="RH0xHmqn9qqFB7qj1Un0hl">
+        <!-- 背景：鹿城区范围示意 -->
+        <rect width="800" height="420" fill="transparent" data-page-node-id="aXv78PHbk7DA2NEo0FqMoy"/>
 
-        <!-- 瓯江（手绘感）-->
-        <path d="M -10,40 Q 80,90 140,70 T 280,90 Q 360,120 460,80 T 640,110 Q 740,90 810,130 L 810,180 Q 720,150 620,170 T 440,140 Q 320,170 240,140 T 100,160 Q 30,140 -10,170 Z"
-              fill="#a8c8de" opacity="0.35" data-page-node-id="2lRLg7b6Vj04ufT6kxOcQd"/>
-        <path d="M 0,110 Q 100,140 200,120 T 400,140 T 600,130 T 800,150" fill="none" stroke="#7fa8c4" stroke-width="1.5" opacity="0.5" stroke-dasharray="3,4" data-page-node-id="F4LUPbD1X1LzS5S9DxBhnV"/>
+        <!-- 瓯江（基于实际河道走向，自西向东再折向东南） -->
+        <path d="M -20,20 Q 60,35 140,30 T 300,55 Q 400,80 500,75 T 720,110 L 820,140 L 820,185 Q 720,155 600,165 T 380,145 Q 260,165 160,140 T -20,155 Z"
+              fill="#8fb8d4" opacity="0.22" data-page-node-id="2lRLg7b6Vj04ufT6kxOcQd"/>
+        <path d="M 0,55 Q 100,65 200,60 T 400,80 T 600,100 T 800,130" fill="none" stroke="#5a8aa8" stroke-width="1.5" opacity="0.35" stroke-dasharray="4,5" data-page-node-id="F4LUPbD1X1LzS5S9DxBhnV"/>
 
-        <!-- 江心屿 -->
-        <ellipse cx="320" cy="115" rx="55" ry="22" fill="#c5dca7" opacity="0.85" stroke="#8fb872" stroke-width="1.2" data-page-node-id="ksqLYIR1iF2ghBEx5RYm5X"/>
-        <text x="320" y="118" text-anchor="middle" font-size="10" fill="#5a7044" font-family="PingFang SC, sans-serif" font-weight="600" data-page-node-id="Qem8SAkHvyqmfF7FXklbwE">江心屿</text>
+        <!-- 江心屿（瓯江中的岛屿，实际位于鹿城区北面江心） -->
+        <ellipse cx="166" cy="39" rx="48" ry="18" fill="#b8d4a0" opacity="0.9" stroke="#7ba360" stroke-width="1.2" data-page-node-id="ksqLYIR1iF2ghBEx5RYm5X"/>
+        <text x="166" y="42" text-anchor="middle" font-size="10" fill="#4a6338" font-family="PingFang SC, sans-serif" font-weight="600" data-page-node-id="Qem8SAkHvyqmfF7FXklbwE">江心屿</text>
 
-        <!-- 江心屿码头 -->
-        <circle cx="240" cy="135" r="4" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="ITsPf7Mj4DifHrlVyzwSpH"/>
-        <text x="240" y="155" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="WQefSRK0ccQfy7KgVBfvao">码头</text>
+        <!-- 五马街历史文化街区（老城核心，实际位于瓯江南岸） -->
+        <rect x="190" y="55" width="120" height="90" rx="12" style="fill: var(--card-soft)" style="stroke: var(--text-faint)" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6" data-page-node-id="2OKI6eejQUTlAWJyiEa5Ff"/>
+        <text x="250" y="72" text-anchor="middle" font-size="10" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="sKJFFLQzYqFEJxCtaEitdC">五马街历史文化街区</text>
 
-        <!-- 阿外楼（瓯江边）-->
-        <circle cx="160" cy="170" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="zALTK7Z0tUzbmZLI3KAWoZ"/>
-        <text x="160" y="190" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="i816ssXQk2Ib1j9rrWgoeG">阿外楼</text>
+        <!-- 温州南站（西南郊，瓯海区潘桥） -->
+        <g transform="translate(17, 222)" data-page-node-id="zALTK7Z0tUzbmZLI3KAWoZ">
+          <rect x="-22" y="-11" width="44" height="22" rx="4" fill="#2a7a3e" stroke="white" stroke-width="1.5" data-page-node-id="roODOotcDAC7wSWhFmBDDL"/>
+          <text x="0" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="o6WxH1h14XwIRahcXtZ2c4">南站</text>
+        </g>
 
-        <!-- 五马街区域标记 -->
-        <rect x="340" y="220" width="180" height="130" rx="14" fill="none" style="stroke: var(--text-faint)" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5" data-page-node-id="2OKI6eejQUTlAWJyiEa5Ff"/>
-        <text x="430" y="365" text-anchor="middle" font-size="10" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="sKJFFLQzYqFEJxCtaEitdC">五马街区</text>
+        <!-- 瓯菜排档南站店（南站北侧） -->
+        <circle cx="29" cy="249" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="x9lHUsKHFGnIWp0iPxAxb2"/>
+        <text x="29" y="270" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="VdWqRdOqvDllG6pt3FB0X6">瓯菜排档</text>
 
-        <!-- 饱塔文创 -->
-        <circle cx="395" cy="245" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="vu2BnMcUhPqTEXKUjJPZE3"/>
-        <text x="395" y="232" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="A5OVtBCahmmnR9XKt53nKT">饱塔文创</text>
+        <!-- 温州博物馆（市府路，城市东侧） -->
+        <circle cx="337" cy="156" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="oMdKVui5x8qO8DNURuaC3P"/>
+        <text x="337" y="140" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="aGoZ1tRAOvkm1Ut7jrDEgD">温州博物馆</text>
 
-        <!-- 瓦市菜场 -->
-        <circle cx="510" cy="290" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="VinCWDrLGnQU1ZEoHiCzN2"/>
-        <text x="535" y="294" font-size="9" style="fill: var(--text-muted)" data-page-node-id="r2bTOiSyZAzFj41Nvjv9zc">瓦市菜场</text>
+        <!-- 阿外楼大酒店（瓯江大厦，温州大道南侧） -->
+        <circle cx="283" cy="174" r="5" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="i816ssXQk2Ib1j9rrWgoeG"/>
+        <text x="283" y="194" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="qB7Gg94n6DaDXajUC6YfEk">阿外楼</text>
 
-        <!-- 温州博物馆 -->
-        <circle cx="345" cy="285" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="oMdKVui5x8qO8DNURuaC3P"/>
-        <text x="335" y="305" text-anchor="end" font-size="9" style="fill: var(--text-muted)" data-page-node-id="aGoZ1tRAOvkm1Ut7jrDEgD">温州博物馆</text>
+        <!-- 黄府粥饭（南浦路，城市中南部） -->
+        <circle cx="257" cy="144" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="N50JVWMOK34GT1bQfxrq4G"/>
+        <text x="257" y="162" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="A5OVtBCahmmnR9XKt53nKT">黄府粥饭</text>
 
-        <!-- 酒店（金色五角星） -->
-        <g class="map-pin" transform="translate(440, 280)" data-page-node-id="YVkddXlIThw6e5UWPASqn0">
+        <!-- 瓦市菜场（五马街东北侧） -->
+        <circle cx="231" cy="63" r="5" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="VinCWDrLGnQU1ZEoHiCzN2"/>
+        <text x="231" y="48" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="r2bTOiSyZAzFj41Nvjv9zc">瓦市菜场</text>
+
+        <!-- 饱塔文创（公园路，五马街区内） -->
+        <circle cx="240" cy="78" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="vu2BnMcUhPqTEXKUjJPZE3"/>
+        <text x="268" y="81" font-size="9" style="fill: var(--text-muted)" data-page-node-id="dKYn5qycCCh1IZDFJSFMDv">饱塔文创</text>
+
+        <!-- 娟娟早点店（东明路，五马街东南侧） -->
+        <circle cx="260" cy="72" r="4" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="YYxNBpuJiu6Areh5tMqNSv"/>
+        <text x="288" y="68" font-size="9" style="fill: var(--text-muted)" data-page-node-id="zRrmNWOVFg1d2CKCzSjsaq">娟娟早点</text>
+
+        <!-- 酒店（金色五角星，五马街核心） -->
+        <g class="map-pin" transform="translate(223, 84)" data-page-node-id="YVkddXlIThw6e5UWPASqn0">
           <polygon points="0,-10 2.9,-3.1 10,-3.1 4.1,1.2 6.2,8 0,4 -6.2,8 -4.1,1.2 -10,-3.1 -2.9,-3.1" fill="#c8941f" stroke="#7a5810" stroke-width="0.5" data-page-node-id="3Rl9yLdsHjaPa7nZPpZ5TG"/>
           <text y="20" text-anchor="middle" font-size="9" fill="#7a5810" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="7dNTqFRsxbXLBBLuyeTfwl">亚朵见野</text>
         </g>
 
-        <!-- 娟娟早点 -->
-        <circle cx="480" cy="340" r="4" fill="#4a7c8c" stroke="white" stroke-width="1.5" data-page-node-id="YYxNBpuJiu6Areh5tMqNSv"/>
-        <text x="480" y="358" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="dKYn5qycCCh1IZDFJSFMDv">娟娟早点</text>
+        <!-- 龙湾机场（东郊，龙湾区海滨） -->
+        <g transform="translate(780, 399)" data-page-node-id="3EpZcS5HT5nDNLk2GvLJS0">
+          <rect x="-28" y="-11" width="56" height="22" rx="4" fill="#1c5e8a" stroke="white" stroke-width="1.5" data-page-node-id="VGC7WDPNggE3yFFo3N84Uj"/>
+          <text x="0" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="ITsPf7Mj4DifHrlVyzwSpH">龙湾机场</text>
+        </g>
 
-        <!-- 黄府粥饭 -->
-        <circle cx="370" cy="410" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="N50JVWMOK34GT1bQfxrq4G"/>
-        <text x="370" y="428" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="qB7Gg94n6DaDXajUC6YfEk">黄府粥饭</text>
+        <!-- D1 路线（红色虚线）：南站→瓯菜排档→博物馆→酒店→瓦市→饱塔→黄府粥饭 -->
+        <path d="M 17,222 L 29,249 L 337,156 L 223,84 L 231,63 L 240,78 L 257,144"
+              fill="none" stroke="#c44536" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.75" stroke-linejoin="round" stroke-linecap="round" data-page-node-id="tT3QfQDNpYvUyp1WQZxDFL"/>
 
-        <!-- 瓯菜排档南站店 -->
-        <circle cx="430" cy="490" r="4" fill="#c44536" stroke="white" stroke-width="1.5" data-page-node-id="x9lHUsKHFGnIWp0iPxAxb2"/>
-        <text x="430" y="478" text-anchor="middle" font-size="9" style="fill: var(--text-muted)" data-page-node-id="VdWqRdOqvDllG6pt3FB0X6">瓯菜排档</text>
-
-        <!-- 温州南站 -->
-        <rect x="395" y="510" width="50" height="22" rx="4" fill="#2a7a3e" stroke="white" stroke-width="1.5" data-page-node-id="roODOotcDAC7wSWhFmBDDL"/>
-        <text x="420" y="525" text-anchor="middle" font-size="10" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="o6WxH1h14XwIRahcXtZ2c4">南站</text>
-
-        <!-- 温州龙湾机场 -->
-        <rect x="700" y="440" width="60" height="22" rx="4" fill="#1c5e8a" stroke="white" stroke-width="1.5" data-page-node-id="3EpZcS5HT5nDNLk2GvLJS0"/>
-        <text x="730" y="455" text-anchor="middle" font-size="10" fill="white" font-weight="600" font-family="PingFang SC, sans-serif" data-page-node-id="VGC7WDPNggE3yFFo3N84Uj">龙湾机场</text>
-
-        <!-- D1 路线（红色虚线） -->
-        <path d="M 420,510 L 430,490 L 345,285 L 440,280 L 395,245 L 510,290 L 440,280 L 430,260 L 370,410"
-              fill="none" stroke="#c44536" stroke-width="2" stroke-dasharray="5,4" opacity="0.7" data-page-node-id="tT3QfQDNpYvUyp1WQZxDFL"/>
-
-        <!-- D2 路线（蓝色虚线） -->
-        <path d="M 440,280 L 480,340 L 240,135 L 430,260 L 440,280 L 160,170 L 420,510"
-              fill="none" stroke="#4a7c8c" stroke-width="2" stroke-dasharray="5,4" opacity="0.7" data-page-node-id="1BxTj80rzChONBq3NcpJrd"/>
+        <!-- D2 路线（蓝色虚线）：酒店→娟娟→江心屿→五马街→阿外楼→南站 -->
+        <path d="M 223,84 L 260,72 L 166,39 L 223,84 L 283,174 L 17,222"
+              fill="none" stroke="#4a7c8c" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.75" stroke-linejoin="round" stroke-linecap="round" data-page-node-id="1BxTj80rzChONBq3NcpJrd"/>
 
         <!-- 指南针 -->
-        <g transform="translate(740, 60)" data-page-node-id="opjSbwujyKbcQMGCjLai4F">
+        <g transform="translate(740, 50)" data-page-node-id="opjSbwujyKbcQMGCjLai4F">
           <circle r="22" fill="none" style="stroke: var(--text-faint)" stroke-width="1" opacity="0.6" data-page-node-id="aGIUvU05U4drg9wOgF4XbW"/>
           <polygon points="0,-15 4,0 0,-5 -4,0" fill="#c44536" data-page-node-id="OYirfPO8TzEvge0kcTXu6N"/>
           <polygon points="0,15 4,0 0,5 -4,0" style="fill: var(--text-faint)" opacity="0.5" data-page-node-id="aXNnAVY9mfi2LH6dQ6xeX3"/>
           <text y="-25" text-anchor="middle" font-size="10" style="fill: var(--text-muted)" font-family="PingFang SC, sans-serif" font-weight="600" data-page-node-id="AzLcmU16K6vqWK5k8m10bx">N</text>
         </g>
 
-        <!-- 比例尺 -->
-        <g transform="translate(40, 500)" data-page-node-id="Oi35UGs5puOAXz2CAzeTDk">
+        <!-- 比例尺（约 10 km） -->
+        <g transform="translate(40, 385)" data-page-node-id="Oi35UGs5puOAXz2CAzeTDk">
           <line x1="0" y1="0" x2="80" y2="0" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="voOSyzFyo4pDjqh1RraHjc"/>
           <line x1="0" y1="-4" x2="0" y2="4" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="INhQLLzuDZCACALD1x2Yli"/>
           <line x1="80" y1="-4" x2="80" y2="4" style="stroke: var(--text-faint)" stroke-width="1.5" data-page-node-id="i6f7eFV1saeh63c6Zf97c7"/>
-          <text x="40" y="-8" text-anchor="middle" font-size="9" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="i2MBUA1jCLIAxD6XB4asA9">约 1 km</text>
+          <text x="40" y="-8" text-anchor="middle" font-size="9" style="fill: var(--text-faint)" font-family="PingFang SC, sans-serif" data-page-node-id="i2MBUA1jCLIAxD6XB4asA9">约 10 km</text>
         </g>
 
         <!-- 标题 -->
-        <text x="20" y="30" font-size="11" style="fill: var(--text-muted)" font-family="PingFang SC, sans-serif" letter-spacing="2" data-page-node-id="w9AF9D4v2N2KsuKLiaITkE">WENZHOU · 温州</text>
+        <text x="20" y="24" font-size="11" style="fill: var(--text-muted)" font-family="PingFang SC, sans-serif" letter-spacing="2" data-page-node-id="w9AF9D4v2N2KsuKLiaITkE">WENZHOU · 按实际地理位置绘制</text>
       </svg>
 
       <div class="map-legend" data-page-node-id="xvTr0v5iY6iNB3WTweePF3">
@@ -870,7 +903,7 @@
   <section data-page-node-id="ShdbTCPPwtVOsCnG8wMBnv">
     <div class="section-title" data-page-node-id="Hl1uk0GxypoBHYUYv6HhaY">待办清单 <span class="section-title-en" data-page-node-id="glyDe8rO4RpEI9lpGwZef7">TODO</span></div>
     <div class="todo-list" id="todoList" data-page-node-id="OSJaCLWVNcYt5sijnEqh76"></div>
-    <p class="small" style="margin-top:10px;" data-page-node-id="ncUTnhjoMAk4Ng40ZFcED2">办完一项告诉我，我会更新页面。</p>
+    <p class="small" style="margin-top:10px;" data-page-node-id="ncUTnhjoMAk4Ng40ZFcED2">勾选状态只存在你自己的浏览器里，换设备不同步。</p>
   </section>
 
   <!-- ============================ 实用贴士 ============================ -->
@@ -882,8 +915,8 @@
 </main>
 
 <footer data-page-node-id="7cgMNBbRiWYRJue3RylfXc">
-  <p data-page-node-id="mYgRTEjyMqzGvBFPZA0xCp">温州 2 天 1 夜 · 母女同游 · 终稿</p>
-  <p data-page-node-id="TKsbBoaBvmUG0hN10cV2rl">所有时间 Asia/Shanghai (UTC+8) · 公开页面不含任何确认号/证件号/房间号</p>
+  <p data-page-node-id="mYgRTEjyMqzGvBFPZA0xCp">温州行 · 终稿</p>
+  <p data-page-node-id="TKsbBoaBvmUG0hN10cV2rl">所有时间 Asia/Shanghai (UTC+8) · 公开页面不含任何确认号/证件号/房间号/手机号</p>
 </footer>
 
 <button class="theme-toggle" id="themeToggle" aria-label="切换主题" data-page-node-id="UMs91wCJ5mL47UozEqFts9">🌗</button>
@@ -895,31 +928,31 @@
 const TARGET = '2026-09-09T09:22:00+08:00'; // G1680 福州南出发
 
 const TRANSPORT = [
-  { type:'train', tag:'去程 · 你', title:'G1680 福州南 → 温州南', row:['福州南','温州南'], time:'09:22 → 11:10', date:'9/9 周三', sub:'一等座 · 二等座候补' },
-  { type:'flight', tag:'去程 · 妈妈', title:'MU9661 昆明长水 → 温州龙湾 T2', row:['昆明长水','温州龙湾 T2'], time:'16:10 → 18:45', date:'9/9 周三', sub:'公务舱' },
-  { type:'train', tag:'回程 · 你', title:'G1677 温州南 → 福州', row:['温州南','福州'], time:'20:04 → 22:09', date:'9/10 周四', sub:'二等座' },
-  { type:'train', tag:'回程 · 妈妈', title:'D3212 温州南 → 永康南', row:['温州南','永康南'], time:'20:48 → 21:38', date:'9/10 周四', sub:'动车' },
+  { type:'train', tag:'去程 · 你', title:'G1680 福州南 → 温州南', row:['福州南','温州南'], time:'09:22 → 11:10', date:'9/9 周三', sub:'一等座 01车 09A号 · 靠窗 · 检票口 8 · 历时 1h48m · ¥178' },
+  { type:'flight', tag:'去程 · 妈妈', title:'MU9661 昆明长水 → 温州龙湾 T2', row:['昆明长水','温州龙湾 T2'], time:'16:10 → 18:45', date:'9/9 周三', sub:'公务舱 I 舱 · 波音 738（窄体）· 托运 30KG · 热正餐 · 总价 ¥1100' },
+  { type:'train', tag:'回程 · 你', title:'G1677 温州南 → 福州', row:['温州南','福州'], time:'20:04 → 22:09', date:'9/10 周四', sub:'一等座 02车 02A号 · 靠窗 · 检票口 4/6 · 历时 2h05m · ¥180' },
+  { type:'train', tag:'回程 · 妈妈', title:'D3212 温州南 → 永康南', row:['温州南','永康南'], time:'20:48 → 21:38', date:'9/10 周四', sub:'二等座 03车 16D号 · 过道 · 检票口 3/5 · 历时 50m · ¥52' },
 ];
 
 const HOTEL = {
   type:'hotel', tag:'住宿',
   title:'温州五马街步行街亚朵见野酒店',
-  address:'温州市鹿城区五马街 168-1 号',
-  phone:'(前台电话公开可查)',
+  address:'温州市鹿城区五马街 168-1 号（步行街中央，正门在大同巷）',
+  phone:'前台 0577-28826688',
   checkIn:'9/9 入住', checkOut:'9/10 离店',
-  room:'高级双床房',
-  note:'含早餐券 · D2 可在酒店餐厅轻食后再出门'
+  room:'高级双床房 · 27㎡ · 1.2m+1.2m 双床 · 外窗',
+  note:'订单含「无早餐」，但你持有早餐券 · D2 可轻食后再出门 · 订单金额 ¥421'
 };
 
 const D1 = [
   { time:'11:10', title:'抵达温州南站', desc:'出站约 5 min，行李随行', nav:'温州南站', icon:'🚄' },
   { time:'11:30', title:'瓯菜排档午餐', desc:'动车南站店，行李放后备箱；推荐沙蟹生、三层肉、油条汤', nav:'瓯菜排档动车南站店', icon:'🍤', tag:'eat' },
-  { time:'13:00', title:'前往温州博物馆', desc:'出租约 20 min', nav:'温州博物馆', icon:'🚕' },
+  { time:'13:00', title:'前往温州博物馆', desc:'网约车约 20 min', nav:'温州博物馆', icon:'🚗' },
   { time:'13:30', title:'温州博物馆', desc:'凭身份证刷证入馆（免费），行李暂存游客中心；周二至周日 09:00–17:00，周一闭馆', nav:'温州博物馆', icon:'🏛️', tag:'book' },
-  { time:'16:15', title:'取行李回酒店', desc:'出租约 15 min', nav:'亚朵见野酒店五马街', icon:'🚕' },
+  { time:'16:15', title:'取行李回酒店', desc:'网约车约 15 min', nav:'亚朵见野酒店五马街', icon:'🚗' },
   { time:'16:30', title:'办理入住 · 休整', desc:'亚朵见野酒店 五马街 168-1 号', nav:null, icon:'🏨' },
-  { time:'17:00', title:'饱塔文创 · 盖章', desc:'公园路 A8 号，09:30–22:30，任意消费可盖章', nav:'饱塔文创公园路', icon:'📒' },
-  { time:'17:45', title:'瓦市菜场 + 瓦市巷', desc:'妙英薄饼、胖子手撕鸡、吴记熟铺现买现吃', nav:'瓦市菜场', icon:'🥡' },
+  { time:'17:00', title:'瓦市菜场 + 瓦市巷', desc:'妙英薄饼、胖子手撕鸡、吴记熟铺、大王灯盏糕现买现吃', nav:'瓦市菜场', icon:'🥡' },
+  { time:'17:45', title:'饱塔文创 · 盖章', desc:'公园路 A8 号，09:30–22:30，任意消费可盖章', nav:'饱塔文创公园路', icon:'📒' },
   { time:'18:30', title:'回酒店', desc:'等妈妈航班落地', nav:null, icon:'🏨' },
   { time:'19:30', title:'妈妈到酒店', desc:'MU9661 18:45 落地，机场到酒店约 40 min', nav:null, icon:'🛬' },
   { time:'20:00', title:'逛五马街 + 黄府粥饭晚餐', desc:'南浦路 549 号，砂锅粥、煎饺；推荐夏唯奶茶（谢池巷 198 号）外带', nav:'黄府粥饭南浦路', icon:'🥘' },
@@ -928,21 +961,20 @@ const D1 = [
 const D2 = [
   { time:'08:30', title:'起床', desc:'酒店内', nav:null, icon:'⏰' },
   { time:'08:45', title:'酒店早餐（用券 · 轻食）', desc:'水果/面包/咖啡垫肚，留胃给外面', nav:null, icon:'🥐' },
-  { time:'09:40', title:'前往娟娟早点店', desc:'东明路 124 号，出租约 10 min', nav:'娟娟早点店', icon:'🚕' },
+  { time:'09:40', title:'前往娟娟早点店', desc:'东明路 124 号，网约车约 10 min', nav:'娟娟早点店', icon:'🚗' },
   { time:'10:00', title:'糯米饭 + 咸豆浆', desc:'米其林必比登，03:30 起营业', nav:null, icon:'🍚', tag:'eat' },
-  { time:'10:30', title:'前往江心屿', desc:'望江东路 119 号，出租约 10 min', nav:'江心屿', icon:'🚕' },
+  { time:'10:30', title:'前往江心屿', desc:'望江东路 119 号，网约车约 10 min', nav:'江心屿', icon:'🚗' },
   { time:'11:00', title:'江心屿游玩', desc:'门票 ¥30 含轮渡，2.5 h 充裕；19:30 停止入园', nav:'江心屿', icon:'🏝️', tag:'book' },
-  { time:'13:30', title:'返回五马街', desc:'出租', nav:null, icon:'🚕' },
+  { time:'13:30', title:'返回五马街', desc:'网约车', nav:null, icon:'🚗' },
   { time:'14:00', title:'长人馄饨铺', desc:'解放街 195 号，百年非遗；推荐鲜肉馄饨、锅贴', nav:'长人馄饨铺解放街', icon:'🥟', tag:'eat' },
-  { time:'14:30', title:'大王灯盏糕', desc:'解放街 471 号，外脆里糯', nav:'大王灯盏糕解放街', icon:'🥮', tag:'eat' },
   { time:'15:00', title:'噔噔哆杏仁腐', desc:'五马街新街公寓，解暑甜品', nav:'噔噔哆杏仁腐五马街', icon:'🍧', tag:'eat' },
   { time:'15:30', title:'县前汤圆店 · 一鸣真鲜奶吧', desc:'公园路 3 号，鲜肉/麻心汤圆；奶吧带鲜奶车上喝', nav:'县前汤圆店公园路', icon:'🍡', tag:'eat' },
   { time:'16:00', title:'夏唯外卖下单', desc:'备注 17:00 送达酒店；推荐老红糖珍珠奶茶 + 鲜芋燕麦 + 椰香松饼', nav:null, icon:'📱' },
   { time:'16:30', title:'回酒店收拾', desc:'', nav:null, icon:'🧳' },
   { time:'17:00', title:'取外卖 + 退房', desc:'', nav:null, icon:'🏨' },
-  { time:'17:15', title:'前往阿外楼', desc:'瓯江大厦 3 楼，出租约 15 min；赶 17:00 开餐、20:00 收档', nav:'阿外楼大酒店', icon:'🚕', tag:'warn' },
+  { time:'17:15', title:'前往阿外楼', desc:'瓯江大厦 3 楼，网约车约 15 min；赶 17:00 开餐、20:00 收档', nav:'阿外楼大酒店', icon:'🚗', tag:'warn' },
   { time:'17:30', title:'阿外楼晚餐', desc:'正餐压轴，慢慢吃', nav:'阿外楼大酒店', icon:'🥘', tag:'eat' },
-  { time:'19:00', title:'前往温州南站', desc:'出租约 25 min', nav:'温州南站', icon:'🚕' },
+  { time:'19:00', title:'前往温州南站', desc:'网约车约 25 min', nav:'温州南站', icon:'🚗' },
   { time:'19:30', title:'抵达温州南站', desc:'', nav:null, icon:'🚄' },
   { time:'20:04', title:'G1677 回福州', desc:'', nav:null, icon:'🚄' },
   { time:'20:48', title:'D3212 妈妈去永康', desc:'', nav:null, icon:'🚄' },
@@ -992,7 +1024,7 @@ const TIPS = [
   { icon:'🌧️', title:'天气', content:'9 月温州阵雨多发，随身折叠伞；鞋选防滑款（瓦市菜场地面易滑）。' },
   { icon:'💵', title:'现金 / 支付', content:'老字号小吃基本支持扫码付款，零钱备 100 元足够以防万一。' },
   { icon:'🧳', title:'行李寄存', content:'温州南站有智能寄存柜（小件 5 元/4 h，大件 10 元/天）；博物馆游客中心可免费暂存。' },
-  { icon:'🚕', title:'打车预算', content:'全程推荐出租/网约车，温州南到五马街约 35 元、机场到酒店约 80–100 元。S1 机场线本次不推荐（行李拖来拖去更累）。' },
+  { icon:'🚗', title:'打车预算', content:'全程网约车，温州南到五马街约 35 元、机场到酒店约 80–100 元。S1 机场线本次不推荐（行李拖来拖去更累）。' },
   { icon:'🏛️', title:'博物馆', content:'免费，刷身份证入馆；周二至周日 09:00–17:00，周一闭馆。9/9 周三正常开放。' },
   { icon:'🏝️', title:'江心屿', content:'¥30 含往返轮渡；旺季周末 19:30 停止入园，工作日略宽。建议一上岛先去东园，再逛西园。' },
   { icon:'📞', title:'应急联系', content:'酒店前台、博物馆咨询电话都已在「已确认订单」区列出。' },
@@ -1048,7 +1080,7 @@ function renderBookings() {
 
 function renderDayPanel(day, data) {
   const summary = day === 1
-    ? '抵温 → 博物馆 → 饱塔文创盖章 → 瓦市逛吃 → 五马街 + 黄府粥饭'
+    ? '抵温 → 博物馆 → 瓦市逛吃 → 饱塔文创盖章 → 五马街 + 黄府粥饭'
     : '糯米饭 → 江心屿 → 五马街小吃 → 阿外楼正餐 → 各自回程';
 
   const dayColor = day === 1 ? 'var(--d1)' : 'var(--d2)';
@@ -1202,16 +1234,46 @@ function catLabel(c) {
   return { breakfast:'早餐', snack:'小吃', dinner:'正餐', sweet:'甜品', tea:'茶饮' }[c] || c;
 }
 
+function loadTodoState() {
+  try {
+    const raw = localStorage.getItem('wenzhou-todos');
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) { return []; }
+}
+
+function saveTodoState(state) {
+  try { localStorage.setItem('wenzhou-todos', JSON.stringify(state)); } catch (e) {}
+}
+
 function renderTodos() {
-  document.getElementById('todoList').innerHTML = TODOS.map(t => `
-    <div class="todo-item">
-      <div class="todo-marker">·</div>
+  const state = loadTodoState();
+  document.getElementById('todoList').innerHTML = TODOS.map((t, i) => {
+    const done = state[i] === true;
+    return `
+    <div class="todo-item${done ? ' done' : ''}" data-todo="${i}">
+      <div class="todo-check${done ? ' checked' : ''}" role="checkbox" aria-checked="${done}" tabindex="0">
+        ${done ? '<svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>' : ''}
+      </div>
       <div class="todo-text">
         ${t.text}
         ${t.meta ? `<div class="todo-meta">${t.meta}</div>` : ''}
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
+
+  document.querySelectorAll('#todoList .todo-check').forEach(el => {
+    const toggle = () => {
+      const item = el.closest('.todo-item');
+      const idx = parseInt(item.dataset.todo, 10);
+      const state = loadTodoState();
+      state[idx] = !state[idx];
+      saveTodoState(state);
+      renderTodos();
+    };
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
 }
 
 function renderTips() {
